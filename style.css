@@ -388,10 +388,6 @@ nav .fas {
 
 /*Small Screen*/
 @media only screen and (max-width: 600px) {
-  body {
-    margin-left: 26px;
-  }
-
   #header {
     background-image: url(IMAGES/Small\ Hero.jpeg);
     height: 80vh;
@@ -400,6 +396,7 @@ nav .fas {
   .header-text {
     margin-top: 100%;
     font-size: 16px;
+    color: #fff;
   }
 
   .header-text h1 {
@@ -413,10 +410,6 @@ nav .fas {
   nav .fas {
     display: block;
     font-size: 25px;
-  }
-
-  .container {
-    padding: 25px 28px 10px 0;
   }
 
   nav ul {
