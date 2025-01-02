@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width = device - width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./portfolio.css" />
     <script
       src="https://kit.fontawesome.com/a29196e54d.js"
@@ -13,14 +13,16 @@
   <body>
     <header>
       <img src="./Images2/logo.png" alt="Personal Logo" width="125px" />
-      <nav id="navbar">
+      <nav id="navbar" class="navbar">
         <a href="https://nguli-portfolio.netlify.app/" id="navlink">Home</a>
         <a href="https://github.com/Abigail-Nguli" target="_blank" id="navlink"
           >Profile</a
         >
         <a href="#projects" id="navlink">Projects</a>
         <a href="#contact" id="navlink">Contact</a>
+        <i class="fa-regular fa-circle-xmark fas" onclick="closemenu()"></i>
       </nav>
+      <i class="fa-solid fa-bars fas2" onclick="openmenu()"></i>
     </header>
 
     <div id="projects">
@@ -62,15 +64,11 @@
           <img src="IMAGES/image.png" alt="Holder Image" id="holder" />
           <h3>E-commerce Website</h3>
           <p>
-            <i>Toto Baby Shop</i> is a unique and specialized online
-                baby-shop located in the vibrant city of Nairobi, Kenya and it
-                is renowned for its expertise in selling baby clothes to parents
-                in Kenya.
+            <i>Toto Baby Shop</i> is a unique and specialized online baby-shop
+            located in the vibrant city of Nairobi, Kenya and it is renowned for
+            its expertise in selling baby clothes to parents in Kenya.
           </p>
-          <a
-            href="https://online-baby-shop.netlify.app/"
-            target="_blank"
-          >
+          <a href="https://online-baby-shop.netlify.app/" target="_blank">
             <button id="source">View Project</button>
           </a>
           <a
@@ -274,6 +272,16 @@
       <p>Copyright <i class="fa-solid fa-copyright"></i> Nguli @2024</p>
     </div>
     <script>
+      var sideMenu = document.getElementsByClassName("navbar")[0];
+
+      function openmenu() {
+        sideMenu.style.right = "0";
+      }
+
+      function closemenu() {
+        sideMenu.style.right = "-200px";
+      }
+
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzghUU8f0Tt3obrjXbBQ89_4hIntofAg9i-r1uymAgL_0z13y3p1pkmWMuSlk1xkNHj/exec";
       const form = document.forms["submit-to-google-sheet"];

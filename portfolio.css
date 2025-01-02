@@ -140,7 +140,6 @@ article li {
   border-radius: 15px;
 }
 
-#phone ul,
 #socials ul {
   display: flex;
   align-items: center;
@@ -241,4 +240,78 @@ form textarea {
 
 .copyright i {
   color: #834559;
+}
+
+/*Small Screen*/
+@media only screen and (max-width: 600px) {
+  header img {
+  margin-left: 20px;
+  width: 100px;
+}
+
+  #navbar {
+    background: #8b979d;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    left: auto;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 0;
+    margin: 0;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  #navlink {
+    display: block;
+    margin: 15px;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  nav .fas {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+
+  .fas2{
+    font-size: 35px;
+    margin: 18px;
+    color: #011f2d;
+  }
+
+  #projects-info{
+    flex-direction: column;
+  }
+
+#projects-info img {
+  width: 40vh;
+  height: 30vh;
+}
+
+#projects-info button {
+  width: 80%;
+  margin: 15px auto;
+}
+
+  #socials li {
+    width: 30vh;
+  }
+
+  #contact,
+  #socials ul {
+    flex-direction: column;
+  }
+
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  .copyright {
+    font-size: 14px;
+  }
 }
