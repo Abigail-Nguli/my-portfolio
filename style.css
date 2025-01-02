@@ -23,7 +23,7 @@ body {
 }
 
 .container {
-  padding: 25px 10% 10px 18px;
+  padding: 10px 10%;
 }
 
 nav {
@@ -388,7 +388,7 @@ nav .fas {
 
 /*Small Screen*/
 @media only screen and (max-width: 600px) {
-  body{
+  body {
     margin-left: 26px;
   }
 
@@ -415,7 +415,7 @@ nav .fas {
     font-size: 25px;
   }
 
-  .container{
+  .container {
     padding: 25px 28px 10px 0;
   }
 
@@ -457,8 +457,8 @@ nav .fas {
   }
 
   .about-col-1 img {
-  height: auto;
-}
+    height: auto;
+  }
 
   .about-col-2 {
     font-size: 14px;
