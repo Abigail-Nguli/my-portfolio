@@ -2,39 +2,62 @@ body {
   margin: 0;
   padding: 0;
   background-color: #7a7a7a;
+  box-sizing: border-box;
 }
 
-header {
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   background: linear-gradient(45deg, #473e51, #949494);
-  padding-bottom: 22px;
+  padding: 30px 7%;
 }
 
-header img {
-  margin-left: 107px;
+.logo {
+  width: 125px;
 }
 
 a {
   text-decoration: none;
 }
 
-#navbar {
-  margin: 10px 55px 13px 10px;
-  padding-left: 40px;
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
-#navlink {
+nav ul li a {
   color: #0c2835;
   font-size: 22px;
   text-decoration: none;
-  padding: 31px;
+  position: relative;
   font-weight: bold;
 }
 
-#navlink:hover {
-  color: #fff;
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #aeaeae;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#close {
+  display: none;
 }
 
 #projects {
@@ -244,59 +267,65 @@ form textarea {
 
 /*Small Screen*/
 @media only screen and (max-width: 600px) {
-  header img {
-  margin-left: 20px;
-  width: 100px;
-}
+  .logo {
+    margin-left: 20px;
+    width: 100px;
+  }
 
-  #navbar {
+  nav .fas {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
     background: #8b979d;
     position: fixed;
     top: 0;
-    right: -200px;
-    left: auto;
+    right: -300px;
     width: 200px;
     height: 100vh;
     padding-top: 50px;
-    padding-left: 0;
-    margin: 0;
     z-index: 2;
     transition: right 0.5s;
   }
 
-  #navlink {
+  nav ul li {
     display: block;
-    margin: 15px;
-    padding: 5px;
-    font-size: 15px;
+    margin: 25px;
   }
 
-  nav .fas {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
+  #mobile{
+    display: block;
   }
 
-  .fas2{
-    font-size: 35px;
-    margin: 18px;
+  #mobile i {
     color: #011f2d;
+    font-size: 24px;
+    padding-left: 20px;
   }
 
-  #projects-info{
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+
+  #projects-info {
     flex-direction: column;
   }
 
-#projects-info img {
-  width: 40vh;
-  height: 30vh;
-}
+  #projects-info img {
+    width: 40vh;
+    height: 30vh;
+  }
 
-#projects-info button {
-  width: 80%;
-  margin: 15px auto;
-}
+  #projects-info button {
+    width: 80%;
+    margin: 15px auto;
+  }
 
   #socials li {
     width: 30vh;
